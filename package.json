@@ -1,0 +1,27 @@
+{
+    "name": "kattis-solution-joinstrings",
+    "version": "1.0.0",
+    "description": "Solution for joinstrings",
+    "scripts": {
+        "submit": "cp ../.kattisrc . && python3 submit.py -p joinstrings -f ./Solution/Program.cs ./Solution/InputOutput.cs",
+        "format": "dotnet format",
+        "precommit": "lint-staged",
+        "test": "cd Tests && dotnet watch test"
+    },
+    "devDependencies": {
+        "husky": "^4.2.5",
+        "lint-staged": "10.2.11"
+    },
+    "lint-staged": {
+        "**/*.{cs}": [
+            "npm run format"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "author": "Piotr Karpala",
+    "license": "ISC"
+}
